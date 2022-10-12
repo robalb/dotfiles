@@ -169,22 +169,22 @@ function parse_git_dirty {
 
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[35m\]`parse_git_branch`\[\033[00m\]\$ '
 
-#swap esc and capslock
-#setxkbmap -option caps:swapescape
-
 #add all kubeconfig files, so that they will be selectable from kubectx
-export KUBECONFIG="/home/al/systems/garr/config:/home/al/.kube/config"
-export PNPM_HOME="/home/al/.local/share/pnpm"
-export LOCAL_BIN="/home/al/.local/bin"
+export KUBECONFIG="/home/al/systems/garr/config:$HOME/.kube/config"
 
-export PATH="$PNPM_HOME:$PATH"
+#add local bin path (it's where kitty, lvim and other apps are installed)
+export LOCAL_BIN="$HOME/.local/bin"
 export PATH="$LOCAL_BIN:$PATH"
+
+#------- \/ the following lines, up to the end of the file
+#           have been added by dumb installation scripts.
+#           Keep this in mind when managing this file in version control
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pnpm
-export PNPM_HOME="/home/al/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
