@@ -93,6 +93,10 @@ nnoremap <leader>c *Ncgn
 "multiline word deletion
 nnoremap <leader>d *Ndgn
 
+"toggle filetree
+nnoremap <leader>t :NvimTreeToggle<CR>
+nnoremap <leader>n :NvimTreeToggle<CR>
+
 
 " ---------- PLUGINS -----------
 
