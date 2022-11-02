@@ -28,6 +28,11 @@ let g:airline_theme='base16'
 set autochdir
 
 
+" save undo history even when a buffer is closed
+" By default neovim saves the undofile in the dedicated directory in the
+" application data folder. The default is good, we don't have to configure anything else
+set undofile
+
 
 
 " ---------- MAPPINGS ------------
