@@ -10,17 +10,15 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.format_on_save = false
+lvim.colorscheme = "tokyonight"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
-
-lvim.format_on_save = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -46,12 +44,17 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   },
 -- }
 
+-- Change theme settings
+-- lvim.builtin.theme.options.dim_inactive = true
+-- lvim.builtin.theme.options.style = "storm"
+
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["<Space>"] = { "/", "search" }
 lvim.builtin.which_key.mappings[">"] = { "<C-W>15>", "resize >" }
 lvim.builtin.which_key.mappings["<"] = { "<C-W>15<", "resize <" }
 lvim.builtin.which_key.mappings["c"] = { "*Ncgn", "change all" }
 lvim.builtin.which_key.mappings["d"] = { "*Ndgn", "delete all" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -66,69 +69,11 @@ lvim.builtin.which_key.mappings["d"] = { "*Ndgn", "delete all" }
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
-lvim.builtin.notify.opts.timeout = 1000
-lvim.builtin.notify.opts.render = "minimal"
-lvim.builtin.notify.opts.stages = "static"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 lvim.builtin.bufferline.options.mode = "tabs"
-lvim.builtin.alpha.dashboard.section.header.val = {
-  [[         __]],
-  [[        / /\]],
-  [[       / /  \]],
-  [[      / /    \__________]],
-  [[     / /      \        /\]],
-  [[    /_/        \      / /]],
-  [[ ___\ \      ___\____/_/_]],
-  [[/____\ \    /___________/\]],
-  [[\     \ \   \           \ \]],
-  [[ \     \ \   \____       \ \]],
-  [[  \     \ \  /   /\       \ \]],
-  [[   \   / \_\/   / /        \ \]],
-  [[    \ /        / /__________\/]],
-  [[     /        / /     /]],
-  [[    /        / /     /]],
-  [[   /________/ /\    /]],
-  [[   \________\/\ \  /]],
-  [[               \_\/neovim]]
-}
-
-lvim.builtin.alpha.dashboard.section.header.val = {
-  [[           ____]],
-  [[          /\   \        ]],
-  [[         /  \   \]],
-  [[        /    \   \]],
-  [[       /      \   \]],
-  [[      /   /\   \   \]],
-  [[     /   /  \   \   \]],
-  [[    /   /    \   \   \]],
-  [[   /   /    / \   \   \]],
-  [[  /   /    /   \   \   \]],
-  [[ /   /    /---------'   \]],
-  [[/   /    /_______________\]],
-  [[\  /                     /]],
-  [[ \/_____________________/  vim]]
-}
-
-lvim.builtin.alpha.dashboard.section.header.val = {
-  [[         ___..._]],
-  [[    _,--'       "`-.]],
-  [[  ,'.  .            \]],
-  [[,/:. .     .       .']],
-  [[|;..  .      _..--']],
-  [[`--:...-,-'""\]],
-  [[        |:.  `.]],
-  [[        l;.   l]],
-  [[        `|:.   |]],
-  [[         |:.   `.,]],
-  [[        .l;.    j, ,]],
-  [[     `. \`;:.   //,/]],
-  [[      .\\)`;,|\'/(]],
-  [[       ` `vim `(,]]
-}
 
 lvim.builtin.alpha.dashboard.section.header.val = {
   [[         .                      .]],
@@ -147,7 +92,6 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   [[         .       *]],
 }
 
-
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -165,13 +109,13 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 -- lvim.lsp.installer.setup.ensure_installed = {
---     "sumeko_lua",
+--     "sumneko_lua",
 --     "jsonls",
 -- }
 -- -- change UI setting of `LspInstallInfo`
@@ -263,10 +207,6 @@ lvim.plugins = {
       })
     end
   },
-  -- {
-  --   "aserowy/tmux.nvim",
-  --   config = function() require("tmux").setup() end
-  -- },
   {
     'alexghergh/nvim-tmux-navigation',
     config = function()
@@ -285,9 +225,19 @@ lvim.plugins = {
   }
 }
 
+
+
+
+-- lvim.plugins = {
+--     {
+--       "folke/trouble.nvim",
+--       cmd = "TroubleToggle",
+--     },
+-- }
+
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.json", "*.jsonc", "*.txt", "*.md" },
+  pattern = { "*.json", "*.jsonc" },
   -- enable wrap mode for json files only
   command = "setlocal wrap",
 })
