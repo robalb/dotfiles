@@ -9,6 +9,7 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
+vim.api.nvim_set_option('undofile', true)
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "tokyonight"
@@ -240,6 +241,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.json", "*.jsonc" },
   -- enable wrap mode for json files only
   command = "setlocal wrap",
+})
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.astro", "*.svelte" },
+  -- enable wrap mode for json files only
+  command = "set filetype=jsx",
 })
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "zsh",
