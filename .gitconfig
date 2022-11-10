@@ -6,7 +6,7 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	name = robalb
-	email = notmyreal@mail.mail
+	email = 11277482+robalb@users.noreply.github.com
 [pull]
 	rebase = false
 [core]
