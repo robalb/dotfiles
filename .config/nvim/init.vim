@@ -91,7 +91,7 @@ nnoremap <leader>< <C-W>15<
 "start find replace command
 " nnoremap <leader>f :%s:::g<Left><Left><Left>
 nnoremap <leader>f <cmd>Telescope find_files<cr>
-nnoremap <leader>g <cmd>Telescope live_grep<cr>
+nnoremap <leader>t <cmd>Telescope live_grep<cr>
 
 "multiline word replacement:
 "shortcut for: -searching a word, -changing it with cgn, -pressing dot to
