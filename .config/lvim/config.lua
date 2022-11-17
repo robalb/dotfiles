@@ -56,6 +56,8 @@ lvim.builtin.which_key.mappings["<"] = { "<C-W>15<", "resize <" }
 lvim.builtin.which_key.mappings["c"] = { "*Ncgn", "change all" }
 lvim.builtin.which_key.mappings["d"] = { "*Ndgn", "delete all" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["f"] = { "<cmd>Telescope find_files<CR>", "Find files" }
+lvim.builtin.which_key.mappings["g"] = { "<cmd>Telescope live_grep<CR>", "Grep files" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -242,11 +244,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
   -- enable wrap mode for json files only
   command = "setlocal wrap",
 })
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.astro", "*.svelte" },
-  -- enable wrap mode for json files only
-  command = "set filetype=jsx",
-})
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = { "*.astro", "*.svelte" },
+--   -- enable wrap mode for json files only
+--   command = "set filetype=jsx",
+-- })
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "zsh",
 --   callback = function()

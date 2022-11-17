@@ -67,11 +67,34 @@ return require('packer').startup(function(use)
       }
     end
   }
+
   use {
     'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
     end
   }
+
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  -- https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb
+  -- use {
+  --     'nvim-treesitter/nvim-treesitter',
+  --     run = function()
+  --         local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+  --         ts_update()
+  --     end,
+  --     config = function()
+  --       require'nvim-treesitter.configs'.setup {
+  --         highlight = {
+  --           -- `false` will disable the whole extension
+  --           enable = true,
+  --         }
+  --       }
+  --     end
+  -- }
 
 end)
