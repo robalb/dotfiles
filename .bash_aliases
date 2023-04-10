@@ -1,6 +1,6 @@
 alias k='kubectl'
-# alias kn='kubectl config set-context --current --namespace '
-alias kn='kubens'
+alias kn='kubectl config set-context --current --namespace '
+#alias kn='kubens'
 alias kc='kubectx'
 alias l='ls -hAl'
 
