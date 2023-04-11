@@ -189,3 +189,5 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+complete -C /usr/bin/terraform terraform

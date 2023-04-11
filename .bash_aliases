@@ -3,6 +3,7 @@ alias kn='kubectl config set-context --current --namespace '
 #alias kn='kubens'
 alias kc='kubectx'
 alias l='ls -hAl'
+alias tf='terraform'
 
 # move the latest downloaded file to the current path
 alias lastd='ls -t1 ~/Downloads/ | head -1 | xargs -p -I{} mv ~/Downloads/{} .'
