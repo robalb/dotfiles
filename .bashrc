@@ -171,7 +171,7 @@ function parse_git_dirty {
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[1;35m\]\u@\h\[\033[00m\]:\[\033[0;37m\]\w\[\033[00m\]\[\e[35m\]`parse_git_branch`\[\033[00m\]\$ '
 
 #add all kubeconfig files, so that they will be selectable from kubectx
-export KUBECONFIG="/home/al/systems/garr/config:$HOME/.kube/config"
+export KUBECONFIG="$HOME/.kube/config"
 
 #add local bin path (it's where kitty, lvim and other apps are installed)
 export LOCAL_BIN="$HOME/.local/bin"
