@@ -4,6 +4,8 @@ alias kn='kubectl config set-context --current --namespace '
 alias kc='kubectx'
 alias l='ls -hAl'
 alias tf='terraform'
+alias vi=nvim
+alias vim=nvim
 
 # move the latest downloaded file to the current path
 alias lastd='ls -t1 ~/Downloads/ | head -1 | xargs -p -I{} mv ~/Downloads/{} .'
