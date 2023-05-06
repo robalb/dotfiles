@@ -5,7 +5,13 @@
 set hlsearch
 " theme
 syntax on
-colorscheme gruvbox
+"colorscheme gruvbox
+
+" This line is required when using the default 16colors theme
+"   otherwise the telescope plugin window will be bright pink on pink
+"   https://github.com/nvim-telescope/telescope.nvim/issues/2145#issuecomment-1264323345
+hi NormalFloat ctermfg=LightGrey
+
 set background=dark
 
 " display line number

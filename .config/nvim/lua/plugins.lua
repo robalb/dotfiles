@@ -40,7 +40,8 @@ return require('packer').startup(function(use)
     },
     config = function()
       require('lualine').setup{
-        options = { theme = 'gruvbox' }
+       --check out the color schemes here https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
+        options = { theme = 'auto' }
       }
     end
 
