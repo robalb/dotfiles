@@ -190,4 +190,7 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+export ANSIBLE_NOCOWS=1
+
 complete -C /usr/bin/terraform terraform
+. "$HOME/.cargo/env"
