@@ -110,6 +110,9 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
   "hcl",
+  "go",
+  "astro",
+  "svelte"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
