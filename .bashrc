@@ -168,7 +168,11 @@ function parse_git_dirty {
 }
 
 # export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[35m\]`parse_git_branch`\[\033[00m\]\$ '
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[1;35m\]\u@\h\[\033[00m\]:\[\033[0;37m\]\w\[\033[00m\]\[\e[35m\]`parse_git_branch`\[\033[00m\]\$ '
+PS_PURPLE_BOLD='\[\033[1;35m\]'
+PS_PURPLE='\[\033[0;35m\]'
+PS_CLEAR='\[\033[0m\]'
+export PS1="${debian_chroot:+($debian_chroot)}${PS_PURPLE_BOLD}\u@\h${PS_CLEAR}:\w${PS_CLEAR}${PS_PURPLE}`parse_git_branch`${PS_CLEAR}\$ "
+
 
 #add all kubeconfig files, so that they will be selectable from kubectx
 export KUBECONFIG="$HOME/.kube/config"
@@ -189,6 +193,10 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+#emscripten
+export PATH="$HOME/emsdk:$HOME/emsdk/upstream/emscripten:$PATH"
+#emscripten end
 
 export ANSIBLE_NOCOWS=1
 
