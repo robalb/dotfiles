@@ -167,11 +167,11 @@ function parse_git_dirty {
   fi
 }
 
-# export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[35m\]`parse_git_branch`\[\033[00m\]\$ '
+#export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[35m\]`parse_git_branch`\[\033[00m\]\$ '
 PS_PURPLE_BOLD='\[\033[1;35m\]'
 PS_PURPLE='\[\033[0;35m\]'
 PS_CLEAR='\[\033[0m\]'
-export PS1="${debian_chroot:+($debian_chroot)}${PS_PURPLE_BOLD}\u@\h${PS_CLEAR}:\w${PS_CLEAR}${PS_PURPLE}`parse_git_branch`${PS_CLEAR}\$ "
+PROMPT_COMMAND='PS1="${debian_chroot:+($debian_chroot)}${PS_PURPLE_BOLD}\u@\h${PS_CLEAR}:\w${PS_CLEAR}${PS_PURPLE}$(parse_git_branch)${PS_CLEAR}\$ "'
 export PROMPT_DIRTRIM=3 #limit the path depth shown in the terminal
 
 
