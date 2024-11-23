@@ -199,6 +199,10 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/emsdk:$HOME/emsdk/upstream/emscripten:$PATH"
 #emscripten end
 
+#golang
+export PATH=$PATH:/usr/local/go/bin:~/go/bin
+#golang end
+
 export ANSIBLE_NOCOWS=1
 
 complete -C /usr/bin/terraform terraform

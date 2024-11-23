@@ -12,6 +12,8 @@ an executable
 vim.api.nvim_set_option('undofile', true)
 lvim.log.level = "warn"
 lvim.format_on_save = false
+-- lvim.format_on_save.enabled = false
+-- lvim.format_on_save.pattern = { "*.go" }
 lvim.colorscheme = "tokyonight"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
