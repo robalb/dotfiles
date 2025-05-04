@@ -1,0 +1,13 @@
+README
+nvim reads its configuration from the ./config/nvim folder.
+
+I maintain my own simple nvim config, and a nvchad config.
+to switch between them, i use a symlink.
+to use nvchad: (nvim >= 0.11)
+
+ln -sfn ~/.config/nvim_chad ~/.config/nvim
+
+to use the basic config:
+
+ln -sfn ~/.config/nvim_myconfig ~/.config/nvim
+
