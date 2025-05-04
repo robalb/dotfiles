@@ -12,6 +12,8 @@ lspconfig.servers = {
     "pyright",
     "astro",
     "cssls",
+    -- see also: ansiblelint. somehow it is required
+    -- https://ansible.readthedocs.io/projects/lint/installing/#installing-the-latest-version
     "ansiblels", -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ansiblels
     -- json, css, svelte, js, ts, tsx... kinda experimental. consider eslint as an alternative.
     "biome", -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ansiblels
@@ -19,9 +21,10 @@ lspconfig.servers = {
 
 -- list of servers configured with default config.
 local default_servers = {
+    "clangd",
     "lua_ls",
     "gopls",
-    "ansiblels", --findout if defaults work
+    "ansiblels",
     "astro",
     "cssls",
     "biome",
