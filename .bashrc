@@ -118,7 +118,7 @@ if ! shopt -oq posix; then
 fi
 
 # vim mode
-set -o vi
+# set -o vi
 
 # get current branch in git repo
 function parse_git_branch() {
