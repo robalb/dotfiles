@@ -3,10 +3,10 @@
 # https://wiki.archlinux.org/index.php/Readline
 
 # TURN ON VIM (E.G. FOR READLINE)
-set editing-mode vi
+# set editing-mode vi
 
 # SHOW THE VIM MODE IN THE PROMPT (COMMAND OR INSERT)
-set show-mode-in-prompt on
+# set show-mode-in-prompt on
 
 # SET THE MODE STRING AND CURSOR TO INDICATE THE VIM MODE
 #   FOR THE NUMBER AFTER `\e[`:
@@ -17,11 +17,11 @@ set show-mode-in-prompt on
 #     4: steady underline
 #     5: blinking bar (xterm)
 #     6: steady bar (xterm)
-set vi-ins-mode-string \1\e[5 q\2
-set vi-cmd-mode-string \1\e[1 q\2
+# set vi-ins-mode-string \1\e[5 q\2
+# set vi-cmd-mode-string \1\e[1 q\2
 
 #################  UGLY ESC DELAY  ##########
 # https://superuser.com/questions/1579208/delay-after-hitting-escape
 # https://unix.stackexchange.com/questions/608142/whats-the-effect-of-escape-time-in-tmux/608179#608179
 # may cause issues on slow ssh connections
-set keyseq-timeout 50
+# set keyseq-timeout 50
