@@ -52,6 +52,13 @@ return {
     -- Extra custom plugins
     -- --------------------
 
+        -- emacs keybindings in insert and cmd mode
+    {
+        "tpope/vim-rsi",
+        event = { "InsertEnter", "CmdlineEnter" }, -- Load when entering insert or command mode
+    },
+
+
     {
         "mfussenegger/nvim-ansible",
         ft = "yml",
